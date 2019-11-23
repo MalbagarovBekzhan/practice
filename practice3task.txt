@@ -1,0 +1,357 @@
+2)#include <iostream>
+using namespace std;
+int main() {
+	int a[100][100];
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 3; j++) {
+			cout << rand() % 9<<" ";
+		}cout << endl;
+	}
+}
+4)#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int ar[100][100];
+	int a, b;
+	cin >> a >> b;
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b; j++) {
+			cin >> ar[i][j];
+		}
+	}
+	for (int i = 0; i < 1; i++) {
+		for (int j = 0; j < b; j++) {
+			cout << ar[0][j] << " ";
+		}
+		cout << endl;
+	}
+	for (int i = 0; i < 1; i++) {
+		for (int j = 0; j < b; j++) {
+			cout << ar[a-1][j] << " ";
+		}        cout << endl;
+
+	}
+
+}
+6)
+8)#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int ar[100][100];
+    int a,b,count=0;
+    cin>>a>>b;
+    for(int i=0;i<a;i++){
+        for(int j =0;j<b;j++){
+            cin>>ar[i][j];
+        }
+    }
+     for(int i=0;i<a;i++){
+        for(int j =0;j<b;j++){
+           if(ar[i][j]==7)
+           count++;
+        }
+       
+     } cout<<count;
+}
+10)#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int ar[100][100];
+    int a,b,count=0,k,p;
+    cin>>a>>b;
+    for(int i=0;i<a;i++){
+        for(int j =0;j<b;j++){
+            cin>>ar[i][j];
+        }
+    }
+    cin>>k>>p;
+     for(int i=0;i<1;i++){
+        for(int j =0;j<b;j++){
+         cout<<ar[k-1][j]<<" ";
+        }
+       
+     } 
+     cout<<endl;
+          for(int i=0;i<a;i++){
+        for(int j =0;j<1;j++){
+         cout<<ar[i][p-1]<<" ";
+        }
+       
+     } 
+}
+18)#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int ar[100][100];
+    for(int i=0;i<5;i++){
+        for(int j =0;j<5;j++){
+            cin>>ar[i][j];
+        }
+    }
+     for(int i=0;i<5;i++){
+        for(int j =0;j<5;j++){
+            swap(ar[4][j],ar[3][j]);
+        }
+        
+     }
+    for(int i=0;i<5;i++){
+        for(int j =0;j<5;j++){
+            cout<<ar[i][j]<<" ";
+        }cout<<endl;
+    }
+        
+}
+26)
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int ar[100][100];
+	int n;
+	cin>>n;
+    for(int i=0;i<n;i++){
+        for(int j =0;j<n;j++){
+            cin>>ar[i][j];
+        }
+    }
+     for(int i=0;i<n;i++){
+        for(int j =0;j<n;j++){
+            swap(ar[0][j],ar[n-1][j]);
+        }
+        
+     }
+    for(int i=0;i<n;i++){
+        for(int j =0;j<n;j++){
+            cout<<ar[i][j]<<" ";
+        }cout<<endl;
+    }
+        
+}
+34)#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int ar[100][100],br[100][100];
+    int n;cin>>n;
+    for(int i=0;i<n;i++){
+        for(int j =0;j<n;j++){
+            cin>>ar[i][j];
+        }
+    }
+     for(int i=0;i<n;i++){
+        for(int j =0;j<n;j++){
+ cin>>br[i][j];        }
+        
+     }
+    for(int i=0;i<n;i++){
+        for(int j =0;j<n;j++){
+            cout<<ar[i][j]*br[i][j]<<" ";
+        }cout<<endl;
+    }
+        
+}
+//3.5
+#include <iostream>
+using namespace std;
+int main()
+{
+	int block[100][100], n;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cin >> block[i][j];
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if ((j % 2 == 0) && (j/2!=0)) {
+				cout << block[i][j] << " ";
+
+			}
+			cout << endl;
+		}
+	}
+}
+
+//3.3
+#include <iostream>
+using namespace std;
+int main()
+{
+	int block[100][100], n;
+	cin >> n;
+	int i, j;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			cin >> block[i][j];
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		cout << block[i][0] << " ";
+
+	}
+	for (i = 0; i < n; i++)
+	{
+		cout << block[i][n-1] << " ";
+
+	}
+
+
+}
+
+
+//3.1
+#include <iostream>
+using namespace std;
+int main()
+{
+	int block[100][100], n=3;
+	int row=4;
+	int i, j;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < row; j++)
+		{
+			cin >> block[i][j];
+		}
+	}
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < row; j++)
+		{
+			cout << block[i][j]<<" ";
+		}
+		cout << endl;
+	}
+}
+
+//3.7
+#include <iostream>
+using namespace std;
+int main()
+{
+	int block[100][100], n = 5;
+	int row = 5;
+	int i, j;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < row; j++)
+		{
+			cin >> block[i][j];
+		}
+	}
+	int res = 0;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < row; j++)
+		{
+			if ((block[i][j] % 2 != 0) && ((block[i][j] < 0)))
+			{
+				res = res + abs(block[i][j]);
+			}
+		}
+	}
+	cout << res;
+}
+
+//3.9
+#include <iostream>
+using namespace std;
+int main()
+{
+	int block[100][100], n = 3;
+	int row = 3;
+	int i, j;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < row; j++)
+		{
+			cin >> block[i][j];
+		}
+	}
+	int res = 0;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < row; j++)
+		{
+			if (block[i][j] == block[j][i])
+			{
+				cout << block[i][j]<<" ";
+			}
+		}
+	}
+}
+
+//3.11
+#include <iostream>
+using namespace std;
+int main()
+{
+	int block[100][100];
+	int n;
+	int m;
+	cin >> n >> m;
+	int i, j;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			cin >> block[i][j];
+		}
+	}
+
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < m; j++)
+		{
+			if (i % 2 == 0) {
+
+				cout << block[i][n - j - 1] << " ";
+			}
+			if (i % 2 != 0) {
+
+				cout << block[i][j] << " ";
+			}
+
+		}
+		cout << endl;
+
+	}
+}
+
+//3.13
+#include <iostream>
+using namespace std;
+int main()
+{
+	int const n = 4;
+	int m[n][n] = { { 3, 2, 2, 2 },
+					{ 1, 3, 2, 2 },
+					{ 1, 1, 3, 2 },
+					{ 1, 1, 1, 3 } };
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << m[i][j]<<" ";
+		}
+		cout << endl;
+	}
+}
